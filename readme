@@ -1,2 +1,9 @@
 phospor icon
 clsx => 
+
+// // trasnlate 
+
+// import dayjs from "dayjs"
+// import 'dayjs/locale/pr-br'
+
+// dayjs.local('pt-br')
