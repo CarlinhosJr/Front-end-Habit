@@ -45,11 +45,11 @@ function SummaryTable() {
       </div>
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
-        {summaryDates.map((date) => {
+        {summary.length > 0 && summaryDates.map((date) => {
           const dayInSummary = summary.find(day =>{
             return dayjs(date).isSame(day.date, 'day')
           })
-          return <HabitDay amount={dayInSummary?.amount} completed={dayInSummary?.completed} date={date} key={date.toString()} />;
+          return <HabitDay amount={dayInSummary?.amount} defaultCompleted={dayInSummary?.completed} date={date} key={date.toString()} />;
         })}
 
         {amountOfDaysToFill > 0 &&

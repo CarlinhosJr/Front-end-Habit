@@ -37,7 +37,7 @@ function NewHabitForm() {
     alert("habito criado com sucesso!");
   }
 
-  // percorre a lista e ver se o dia já está la dentro
+  // percorre a lista e ve se o dia já está la dentro
   function handleToggleWeekDay(weekDay: number) {
     if (weekDays.includes(weekDay)) {
       const weekDaysWithRemovedOne = weekDays.filter((day) => day != weekDay);
@@ -79,7 +79,7 @@ function NewHabitForm() {
                   handleToggleWeekDay(index);
                 }}
               >
-                <div className="h-7 w-7 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500">
+                <div className="h-7 w-7 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500 transition-colors">
                   <Checkbox.Indicator>
                     <Check size={20} className="text-white" />
                   </Checkbox.Indicator>
@@ -92,7 +92,7 @@ function NewHabitForm() {
 
         <button
           type="submit"
-          className="my-6  rounded-lg p-3 flex items-center justify-center gap-3 font-semibold bg-green-600 hover:bg-green-500 "
+          className="my-6  rounded-lg p-3 flex items-center justify-center gap-3 font-semibold bg-green-600 hover:bg-green-500 transition-colors"
         >
           <Check size={20} weight={"bold"} />
           Confirmar
